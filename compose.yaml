@@ -1,0 +1,19 @@
+services:
+  postgres:
+    container_name: 'postgres'
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=postales-db'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=condorcoders'
+    ports:
+      - '5431:5432'
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:9.8
+    ports:
+      - 8888:80
+    environment:
+      # Required by pgAdmin
+      PGADMIN_DEFAULT_EMAIL: demo@example.com
+      PGADMIN_DEFAULT_PASSWORD: secret
