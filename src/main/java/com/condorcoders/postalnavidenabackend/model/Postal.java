@@ -18,8 +18,8 @@ public class Postal {
     public Long id;
     @Column(nullable = false)
     public String slug;
-    @Column(name = "image_url")
-    public String imageUrl;
+    @Column(name = "image_key")
+    public String imageKey;
     @Column(name = "from_name")
     public String fromName;
     @Column(name = "to_name")
