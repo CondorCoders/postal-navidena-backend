@@ -31,6 +31,9 @@ public class PostalService {
         postal.setToName(dto.getToName());
         postal.setMessage(dto.getMessage());
         postal.setImageKey(imageKey);
+        postal.setTheme(dto.getTheme());
+        postal.setStamp(dto.getStamp());
+        postal.setBackgroundTheme(dto.getBackgroundTheme());
 
         // Save entity
         Postal savedPostal = postalRepository.save(postal);
@@ -57,7 +60,10 @@ public class PostalService {
                 postalEntity.getFromName(),
                 postalEntity.getToName(),
                 postalEntity.getMessage(),
-                imageUrl
+                imageUrl,
+                postalEntity.getTheme(),
+                postalEntity.getStamp(),
+                postalEntity.getBackgroundTheme()
         );
     }
 }

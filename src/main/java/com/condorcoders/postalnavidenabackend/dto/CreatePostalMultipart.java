@@ -17,6 +17,15 @@ public class CreatePostalMultipart {
     @NotBlank
     private String message;
 
+    @NotBlank
+    private String theme;
+
+    @NotBlank
+    private String stamp;
+
+    @NotBlank
+    private String backgroundTheme;
+
     @NotNull
     private MultipartFile file;
 

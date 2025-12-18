@@ -1,5 +1,6 @@
 package com.condorcoders.postalnavidenabackend.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,7 @@ public class PostalOutput {
     private String toName;
     private String message;
     private String imageUrl;
+    private String theme;
+    private String stamp;
+    private String backgroundTheme;
 }

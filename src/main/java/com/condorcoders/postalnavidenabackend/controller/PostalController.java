@@ -37,7 +37,10 @@ public class PostalController {
         CreatePostalRequest request = new CreatePostalRequest(
                 dto.getFromName(),
                 dto.getToName(),
-                dto.getMessage()
+                dto.getMessage(),
+                dto.getTheme(),
+                dto.getStamp(),
+                dto.getBackgroundTheme()
         );
         return postalService.createPostal(request, dto.getFile());
     }

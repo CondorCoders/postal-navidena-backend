@@ -1,6 +1,7 @@
 package com.condorcoders.postalnavidenabackend.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,6 +26,12 @@ public class Postal {
     @Column(name = "to_name")
     public String toName;
     public String message;
+    @Column(nullable = false)
+    private String theme;
+    @Column(nullable = false)
+    private String stamp;
+    @Column(name = "background_theme")
+    private String backgroundTheme;
 
     @PrePersist
     public void generateSlug() {

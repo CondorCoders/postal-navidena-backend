@@ -1,5 +1,6 @@
 package com.condorcoders.postalnavidenabackend.dto;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,4 +20,13 @@ public class CreatePostalRequest {
 
     @NotBlank
     private String message;
+
+    @NotBlank
+    private String theme;
+
+    @NotBlank
+    private String stamp;
+
+    @NotBlank
+    private String backgroundTheme;
 }
